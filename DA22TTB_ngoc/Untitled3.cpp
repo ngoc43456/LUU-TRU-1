@@ -33,7 +33,7 @@ void XuatsvN(SINHVIEN a[],int n);
  	getch();
  	Sapxep(a,n);
  	XuatsvN(a,n);
- 	printf("\n\n\n An phim bat ky de in DS Gioi_Xuat sac ");
+ 	printf("\n\n\n An phim bat ky de in DS Gioi_Xuat_sac ");
  	getch();
  	INGX(a,n);
  	printf("\n\n\n\n An phim bat ky de tim SV ");
@@ -100,17 +100,17 @@ void XuatsvN(SINHVIEN a[],int n);
  }
  void Xuatsv(SINHVIEN x)
  {
- 	printf("|%11s|%-18s|%-6s|%10d|%-11s|%14.1f|%-9s|%-10s|",x.Masv,x.Hotensv,x.Phai,x.Namsinh,x.Nganhhoc,x.Kqcuoikhoa,x.Xeploai,x.Quequan);
- } //dau tru can le phai
+ 	printf("|%5s|%-18s|%-6s|%10d|%-11s|%12.1f|%-10s|%-10s",x.Masv,x.Hotensv,x.Phai,x.Namsinh,x.Nganhhoc,x.Kqcuoikhoa,x.Xeploai,x.Quequan);
+ }
   
  void XuatsvN(SINHVIEN a[],int n)
  {
  	system("cls");
- 	printf("\n\n|------------------------------------------------------------------------------------------------|\n");
- 	  printf("|   MA SV   | Ho ten sinh vien | Phai | Nam sinh | Nganh hoc | KQ cuoi khoa | Xep loai| Que quan |");
+ 	printf("\n\n----------------------------------------------------------------------------------------\n");
+ 	printf("|MA SV| Ho ten sinh vien | Phai | Nam sinh | Nganh hoc | KQ cuoi khoa | Xep loai| Que quan |");
  	for(int i=0;i<n;i++)
  	{
- 	printf("\n|-----------|------------------|------|----------|-----------|--------------|---------|----------|\n");
+ 	printf("\n----|------------------|------|----------|-----------|--------------|---------|----------|\n");
 	 Xuatsv(a[i]);	
  	}
  }
@@ -118,7 +118,7 @@ void XuatsvN(SINHVIEN a[],int n);
  void Sapxep(SINHVIEN a[],int n)
  {
  	SINHVIEN tmp;
- 	for(int i=0;i<n;++i)
+ 	for(int i=0;i<n;i++)
  	{
  		for(int j=i+1;j<n;++j)
  		{
@@ -133,35 +133,35 @@ void XuatsvN(SINHVIEN a[],int n);
  }
   void INGX(SINHVIEN a[],int  n)
   {
- 	system("cls");
- 	printf("\n\n|------------------------------------------------------------------------------------------------|\n");
- 	  printf("|   MA SV   | Ho ten sinh vien | Phai | Nam sinh | Nganh hoc | KQ cuoi khoa | Xep loai| Que quan |");
+  	system("cls");
+  		printf("\n\n---------------------------------------------------------------------------------------\n");
+    	printf("|MA SV| Ho ten sinh vien | Phai | Nam sinh | Nganh hoc | KQ cuoi khoa | Xep loai| Que quan |");
  	for(int i=0;i<n;i++)
-      {
- 	    if(a[i].Kqcuoikhoa>=3.0)
- 	    {
- 	printf("\n|-----------|------------------|------|----------|-----------|--------------|---------|----------|\n");
-	 Xuatsv(a[i]);
-        }
-      }
+ 	{
+ 	   	if(a[i].Kqcuoikhoa>=3.0)
+ 	   {	
+ 	    printf("\n----|------------------|------|----------|-----------|--------------|---------|----------|\n");
+	 Xuatsv(a[i]);	
+       }
+ 	}
   }
   
   void TIMSV(SINHVIEN a[],int n)
-  {
- 	system("cls");
- 	fflush(stdin);
- 	char Matim[10];
- 	printf("\n Nham Ma sinh vien can tim: ");
- 	gets(Matim);
- 	printf("\n\n|------------------------------------------------------------------------------------------------|\n");
- 	  printf("|   MA SV   | Ho ten sinh vien | Phai | Nam sinh | Nganh hoc | KQ cuoi khoa | Xep loai| Que quan |");
+   {
+  	system("cls");
+  	fflush(stdin);
+  	char Matim[10];
+  	printf("\n Nhap ma sinh vien can tim: ");
+  	gets(Matim);
+  		printf("\n\n---------------------------------------------------------------------------------------\n");
+    	printf("|MA SV| Ho ten sinh vien | Phai | Nam sinh | Nganh hoc | KQ cuoi khoa | Xep loai| Que quan |");
  	for(int i=0;i<n;i++)
-      {
- 	    if(strcmp(a[i].Masv,Matim)==0)
- 	    {
- 	printf("\n|-----------|------------------|------|----------|-----------|--------------|---------|----------|\n");
-	 Xuatsv(a[i]);
-        }
-      }
+ 	{
+ 	   	if(strcmp(a[i].Masv,Matim)==0)
+ 	   {	
+ 	    printf("\n----|------------------|------|----------|-----------|--------------|---------|----------|\n");
+	 Xuatsv(a[i]);	
+       }
+ 	}
   }
 
